@@ -28,3 +28,4 @@ Pipeline triggered manually and also on `git push` of the main branch
 ## keep up to date with Domain Protect
 * create a custom watch on Domain Protect repository
 * when notified of a new release, run your GitHub Actions pipeline
+* 
