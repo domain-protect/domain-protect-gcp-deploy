@@ -103,11 +103,11 @@ jobs:
           ref: refs/heads/main
 
       - name: Configure GCP Credentials
-          uses: google-github-actions/auth@v0.3.1
-          with:
-            create_credentials_file: 'true'
-            workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER}}
-            service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+        uses: google-github-actions/auth@v0.3.1
+        with:
+          create_credentials_file: 'true'
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER}}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
       - name: Terraform initialise
         run: >
@@ -174,11 +174,11 @@ jobs:
         run: pip install virtualenv
 
       - name: Configure GCP Credentials
-          uses: google-github-actions/auth@v0.3.1
-          with:
-            create_credentials_file: 'true'
-            workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER}}
-            service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+        uses: google-github-actions/auth@v0.3.1
+        with:
+          create_credentials_file: 'true'
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER}}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
       - name: Terraform initialise
         run: >
