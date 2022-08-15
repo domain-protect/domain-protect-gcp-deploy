@@ -172,22 +172,21 @@ jobs:
         run: pip install virtualenv
 
       - name: Configure GCP Credentials
-        id: 'auth'
+        id: auth
         uses: google-github-actions/auth@v0.3.1
         with:
           create_credentials_file: 'true'
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER}}
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
-      - name: Set GOOGLE_APPLICATION_CREDENTIALS environment variable
-        run: |
-          export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
-
-      - id: 'gcloud'
-        name: 'gcloud'
+      - name: Test Google cloud login
         run: |-
           gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
           gcloud config list
+
+      - name: Set GOOGLE_APPLICATION_CREDENTIALS environment variable
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
 
       - name: Terraform initialise
         run: >
