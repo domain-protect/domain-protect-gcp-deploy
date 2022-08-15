@@ -183,6 +183,12 @@ jobs:
         run: |
           export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
 
+      - id: 'gcloud'
+        name: 'gcloud'
+        run: |-
+          gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
+          gcloud config list
+
       - name: Terraform initialise
         run: >
           terraform init 
