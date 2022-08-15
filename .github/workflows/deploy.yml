@@ -62,7 +62,8 @@ jobs:
 
       - name: Set GOOGLE_APPLICATION_CREDENTIALS environment variable
         run: |
-          export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
+          credentials_file_path="${{ steps.auth.outputs.credentials_file_path }}"
+          echo "credentials_file_path=$GOOGLE_APPLICATION_CREDENTIALS" >> $GITHUB_ENV
 
       - name: Terraform initialise
         run: >
