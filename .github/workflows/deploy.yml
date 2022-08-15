@@ -66,9 +66,10 @@ jobs:
           echo "credentials_file_path=$GOOGLE_APPLICATION_CREDENTIALS" >> $GITHUB_ENV
 
       - name: Terraform initialise
-        run: >
-          terraform init 
-          -backend-config=bucket=${{ secrets.TERRAFORM_STATE_BUCKET}} 
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
+          terraform init \
+          -backend-config=bucket=${{ secrets.TERRAFORM_STATE_BUCKET}} \
           -backend-config=prefix=${{ secrets.TERRAFORM_STATE_PREFIX}}
 
       - name: set Terraform dev workspace
