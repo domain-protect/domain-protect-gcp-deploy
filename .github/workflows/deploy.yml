@@ -74,6 +74,7 @@ jobs:
 
       - name: set Terraform dev workspace
         run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
           terraform workspace list > list.txt
           if grep "dev" list.txt
           then
@@ -85,10 +86,14 @@ jobs:
           fi
 
       - name: terraform plan dev
-        run: terraform plan -out tfplan
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
+          terraform plan -out tfplan
 
       - name: terraform apply dev
-        run: terraform apply -auto-approve tfplan
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
+          terraform apply -auto-approve tfplan
   
   terraform_plan_prd:
     name: Terraform plan prd
