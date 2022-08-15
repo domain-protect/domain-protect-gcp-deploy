@@ -56,7 +56,7 @@ jobs:
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
       - name: Test Google cloud login
-        run: |
+        run: |-
           gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
           gcloud config set project $TF_VAR_project
           gcloud config list
