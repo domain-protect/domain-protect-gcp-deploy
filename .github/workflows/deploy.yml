@@ -58,6 +58,7 @@ jobs:
       - name: Test Google cloud login
         run: |
           gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
+          gcloud config set project $TF_VAR_project
           gcloud config list
 
       - name: Set GOOGLE_APPLICATION_CREDENTIALS environment variable
@@ -199,6 +200,7 @@ jobs:
       - name: Test Google cloud login
         run: |-
           gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
+          gcloud config set project 
           gcloud config list
 
       - name: Set GOOGLE_APPLICATION_CREDENTIALS environment variable
