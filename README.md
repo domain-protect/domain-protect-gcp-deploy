@@ -1,6 +1,8 @@
 # domain-protect-gcp-deploy
 Deploy Domain Protect for GCP
 
+# WORK IN PROGRESS - PLEASE DON'T TRY AND FOLLOW THIS GUIDE YET!
+
 Deploy [Domain Protect GCP](https://github.com/ovotech/domain-protect-gcp) using GitHub Actions
 
 * Deploy Domain Protect in your GCP environment
