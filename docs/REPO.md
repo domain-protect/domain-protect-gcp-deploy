@@ -33,7 +33,8 @@ git push
 | TERRAFORM_STATE_PREFIX         | terraform/state/domain-protect-gcp                                                                             |                                                               |                                  |
 | SLACK_CHANNELS                 | ["security-alerts"]                                                                            |
 | SLACK_CHANNELS_DEV             | ["security-alerts-dev"]                                                                        |
-| SLACK_WEBHOOK_URLS             | ["https://hooks.slack.com/services/XXX/XXX/XXX"]                                               | 
+| SLACK_WEBHOOK_URLS             | ["https://hooks.slack.com/services/XXX/XXX/XXX"]                                               |
+| TF_VAR_project                 | mygcpprojectid                                                                                 |
 
 <img src="images/actions-secrets.png" width="500">
 
