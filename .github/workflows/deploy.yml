@@ -213,13 +213,20 @@ jobs:
       - name: Test Google cloud login
         run: |-
           gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
-          gcloud config set project 
+          gcloud config set project $TF_VAR_project
           gcloud config list
 
       - name: Set GOOGLE_APPLICATION_CREDENTIALS environment variable
         run: |
           credentials_file_path="${{ steps.auth.outputs.credentials_file_path }}"
           echo "credentials_file_path=$GOOGLE_APPLICATION_CREDENTIALS" >> $GITHUB_ENV
+
+      - name: Terraform initialise
+        run: |
+          export GOOGLE_APPLICATION_CREDENTIALS="${{ steps.auth.outputs.credentials_file_path }}"
+          terraform init \
+          -backend-config=bucket=${{ secrets.TERRAFORM_STATE_BUCKET}} \
+          -backend-config=prefix=${{ secrets.TERRAFORM_STATE_PREFIX}}
 
       - name: set Terraform prd workspace
         run: terraform workspace select prd
