@@ -128,9 +128,9 @@ jobs:
 
       - name: Terraform initialise
         run: >
-          terraform init 
-          -backend-config=bucket=${{ secrets.TERRAFORM_STATE_BUCKET}} 
-          -backend-config=key=${{ secrets.TERRAFORM_STATE_PREFIX}}
+          terraform init \
+          -backend-config=bucket=${{ secrets.TERRAFORM_STATE_BUCKET}} \
+          -backend-config=prefix=${{ secrets.TERRAFORM_STATE_PREFIX}}
 
       - name: set Terraform prd workspace
         run: |
@@ -209,9 +209,9 @@ jobs:
 
       - name: Terraform initialise
         run: >
-          terraform init 
-          -backend-config=bucket=${{ secrets.TERRAFORM_STATE_BUCKET}} 
-          -backend-config=key=${{ secrets.TERRAFORM_STATE_PREFIX}}
+          terraform init \
+          -backend-config=bucket=${{ secrets.TERRAFORM_STATE_BUCKET}} \
+          -backend-config=prefix=${{ secrets.TERRAFORM_STATE_PREFIX}}
 
       - name: set Terraform prd workspace
         run: terraform workspace select prd

@@ -30,7 +30,7 @@ git push
 | GCP_WORKLOAD_IDENTITY_PROVIDER | projects/123456789/locations/global/workloadIdentityPools/github-actions/providers/domain-protect-gcp-github |
 | GCP_SERVICE_ACCOUNT            | my-service-account@my-project.iam.gserviceaccount.com                                          |
 | TERRAFORM_STATE_BUCKET         | tfstate48903                                                                                   |
-| TERRAFORM_STATE_PREFIX         | domain-protect-gcp                                                                             |                                                               |                                  |
+| TERRAFORM_STATE_PREFIX         | terraform/state/domain-protect-gcp                                                                             |                                                               |                                  |
 | SLACK_CHANNELS                 | ["security-alerts"]                                                                            |
 | SLACK_CHANNELS_DEV             | ["security-alerts-dev"]                                                                        |
 | SLACK_WEBHOOK_URLS             | ["https://hooks.slack.com/services/XXX/XXX/XXX"]                                               | 

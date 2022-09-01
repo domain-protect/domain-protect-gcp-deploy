@@ -20,7 +20,6 @@
 * Configure provider attributes
 * for google.subject add assertion.sub
 * add mapping attribute.repository to assertion.repository
-* add mapping attribute.environment to assertion.environment
 * do not add any attribute conditions
 
 <img src="images/configure-provider-attributes.png" width="500">

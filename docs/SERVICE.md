@@ -1,4 +1,4 @@
-## GCP service account configuration for OIDC
+## GCP service account creation
 * log in to security tooling GCP project 
 * select IAM & Admin, Service Accounts
 * press Create service account
@@ -11,21 +11,16 @@
 
 <img src="images/service-account-access.png" width="500">
 
-* press Continue
-* at service account users role, enter:
+* press Create
+* view the newly created service account in the console
 
+## GCP service account configuration for OIDC
+* Open CloudShell
+* Enter:
 ```
-principalSet://iam.googleapis.com/projects/PROJECT_NUMBER/locations/
-global/workloadIdentityPools/POOL_ID/attribute.ATTRIBUTE_NAME/ATTRIBUTE_VALUE
+gcloud iam service-accounts add-iam-policy-binding "domain-protect-gcp-deploy@PROJECT-ID.iam.gserviceaccount.com" --member="principalSet://iam.googleapis.com/projects/PROJECT-ID/locations/global/workloadIdentityPools/github-actions/attribute.repository/YOUR-GITHUB-ORG/domain-protect-gcp-deploy" --role="roles/iam.workloadIdentityUser"
 ```
-* example below
-* use the project number of your security project
-* use the workload identity pool ID, e.g. `github-actions`
-* change the attribute value to include the cloned repository in your GitHub Organization
-```
-principalSet://iam.googleapis.com/projects/959815883062/locations/global/workloadIdentityPools/github-actions/attribute.repository/"domain-protect/domain-protect-gcp-deploy"
-```
+* view in console at IAM, Service Accounts
+* select Service Account, permissions
 
-<img src="images/grant-access.png" width="500">
-
-* after creation, the permission can be viewed in the console at IAM & Admin, Service Accounts, domain-protect-gcp-deploy, Permissions
+<img src="images/iam-policy-binding.png" width="500">
