@@ -1,10 +1,10 @@
 ## GCP Workload Identity Federation configuration 
-* log in to security tooling GCP account 
+* log in to security tooling GCP project 
 * select IAM & Admin, Workload Identity Federation
 * if this is the first time in this project, select Get Started
 * this will enable required APIs
 * create an identity pool
-* name the pool github-actions, and press Continue
+* name the pool `github-actions`, and press Continue
 
 <img src="images/create-identity-pool.png" width="500">
 
@@ -18,8 +18,8 @@
 <img src="images/add-provider-to-pool.png" width="500">
 
 * Configure provider attributes
-* for google.subject add assertion.sub
-* add mapping attribute.repository to assertion.repository
+* for `google.subject` add `assertion.sub`
+* add mapping `attribute.repository` to `assertion.repository`
 * do not add any attribute conditions
 
 <img src="images/configure-provider-attributes.png" width="500">

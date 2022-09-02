@@ -23,4 +23,4 @@ gcloud iam service-accounts add-iam-policy-binding "domain-protect-gcp-deploy@PR
 * view in console at IAM, Service Accounts
 * select Service Account, permissions
 
-<img src="images/iam-policy-binding.png" width="500">
+<img src="images/iam-policy-binding.png" width="700">
