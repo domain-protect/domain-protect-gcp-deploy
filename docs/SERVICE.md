@@ -18,7 +18,7 @@
 * Open CloudShell
 * Enter:
 ```
-gcloud iam service-accounts add-iam-policy-binding "domain-protect-gcp-deploy@PROJECT-ID.iam.gserviceaccount.com" --member="principalSet://iam.googleapis.com/projects/PROJECT-ID/locations/global/workloadIdentityPools/github-actions/attribute.repository/YOUR-GITHUB-ORG/domain-protect-gcp-deploy" --role="roles/iam.workloadIdentityUser"
+gcloud iam service-accounts add-iam-policy-binding "domain-protect-gcp-deploy@PROJECT-ID.iam.gserviceaccount.com" --member="principalSet://iam.googleapis.com/projects/PROJECT-NUMBER/locations/global/workloadIdentityPools/github-actions/attribute.repository/YOUR-GITHUB-ORG/domain-protect-gcp-deploy" --role="roles/iam.workloadIdentityUser"
 ```
 * view in console at IAM, Service Accounts
 * select Service Account, permissions
