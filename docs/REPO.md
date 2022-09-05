@@ -28,7 +28,7 @@ git push
 | REPOSITORY SECRETS             | EXAMPLE VALUE / COMMENT                                                                        |
 |--------------------------------|------------------------------------------------------------------------------------------------|
 | GCP_WORKLOAD_IDENTITY_PROVIDER | projects/123456789/locations/global/workloadIdentityPools/github-actions/providers/domain-protect-gcp-github |
-| GCP_SERVICE_ACCOUNT            | domain-protect-gcp-deploy@my-project.iam.gserviceaccount.com                                          |
+| GCP_SERVICE_ACCOUNT            | domain-protect-gcp-deploy@mygcpprojectid.iam.gserviceaccount.com                                          |
 | TERRAFORM_STATE_BUCKET         | tfstate48903                                                                                   |
 | TERRAFORM_STATE_PREFIX         | terraform/state/domain-protect-gcp                                                                             |                                                               |                                  |
 | SLACK_CHANNELS                 | ["security-alerts"]                                                                            |
