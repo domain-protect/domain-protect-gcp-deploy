@@ -34,7 +34,8 @@ git push
 | SLACK_CHANNELS                 | ["security-alerts"]                                                                            |
 | SLACK_CHANNELS_DEV             | ["security-alerts-dev"]                                                                        |
 | SLACK_WEBHOOK_URLS             | ["https://hooks.slack.com/services/XXX/XXX/XXX"]                                               |
-| TF_VAR_project                 | mygcpprojectid                                                                                 |
+| PROJECT                 | mygcpprojectid                                                                                 |
+| APP_SERVICE_REGION                 | europe-west1                                                                                 |
 
 <img src="images/actions-secrets.png" width="500">
 
