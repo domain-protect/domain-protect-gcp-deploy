@@ -26,14 +26,14 @@ jobs:
       checks: write
     steps:
       - name: Terraform setup
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.2.2
+          terraform_version: 1.3.4
 
       - name: checkout Domain Protect GCP
         uses: actions/checkout@v3
         with:
-          repository: ovotech/domain-protect-gcp
+          repository: domain-protect/domain-protect-gcp
           ref: refs/heads/main
 
       - name: Set up Python 3.9
@@ -109,14 +109,14 @@ jobs:
       checks: write
     steps:
       - name: Terraform setup
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.2.2
+          terraform_version: 1.3.4
 
       - name: checkout Domain Protect
         uses: actions/checkout@v3
         with:
-          repository: ovotech/domain-protect-gcp
+          repository: domain-protect/domain-protect-gcp
           ref: refs/heads/main
 
       - name: Configure GCP Credentials
@@ -181,14 +181,14 @@ jobs:
       checks: write
     steps:
       - name: Terraform setup
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.2.2
+          terraform_version: 1.3.4
 
       - name: checkout Domain Protect
         uses: actions/checkout@v3
         with:
-          repository: ovotech/domain-protect-gcp
+          repository: domain-protect/domain-protect-gcp
           ref: refs/heads/main
 
       - name: Set up Python 3.9
