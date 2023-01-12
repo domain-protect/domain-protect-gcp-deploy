@@ -1,7 +1,7 @@
 # domain-protect-gcp-deploy
 Deploy Domain Protect for GCP
 
-Deploy [Domain Protect GCP](https://github.com/ovotech/domain-protect-gcp) using GitHub Actions
+Deploy [Domain Protect GCP](https://github.com/domain-protect/domain-protect-gcp) using GitHub Actions
 
 * Deploy Domain Protect in your GCP environment
 * No need to clone or fork Domain Protect GCP
@@ -17,7 +17,7 @@ Pipeline triggered manually and also on `git push` of the main branch
 * Terraform apply for Domain Protect GCP prd in security tooling account (approval required)
 
 # before starting
-* check [requirements](https://github.com/ovotech/domain-protect-gcp)
+* check [requirements](https://github.com/domain-protect/domain-protect-gcp)
 
 ## how to set up
 * [Configure GCP Workload Identity and pool](docs/WORKLOAD.md)

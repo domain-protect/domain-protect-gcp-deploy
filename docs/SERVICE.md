@@ -7,7 +7,7 @@
 <img src="images/create-service-account.png" width="500">
 
 * press Create and continue
-* add the roles listed in [Domain Protect GCP](https://github.com/ovotech/domain-protect-gcp#deployment-permissions)
+* add the roles listed in [Domain Protect GCP](https://github.com/domain-protect/domain-protect-gcp#deployment-permissions)
 
 <img src="images/service-account-access.png" width="500">
 
