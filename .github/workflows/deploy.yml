@@ -31,7 +31,7 @@ jobs:
           terraform_version: 1.4.6
 
       - name: checkout Domain Protect GCP
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: domain-protect/domain-protect-gcp
           ref: refs/heads/main
@@ -114,7 +114,7 @@ jobs:
           terraform_version: 1.4.6
 
       - name: checkout Domain Protect
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: domain-protect/domain-protect-gcp
           ref: refs/heads/main
@@ -186,7 +186,7 @@ jobs:
           terraform_version: 1.4.6
 
       - name: checkout Domain Protect
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: domain-protect/domain-protect-gcp
           ref: refs/heads/main
