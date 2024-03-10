@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: domain-protect/domain-protect-gcp
-          ref: refs/heads/main
+          ref: refs/heads/IOB-Fix
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -117,7 +117,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: domain-protect/domain-protect-gcp
-          ref: refs/heads/main
+          ref: refs/heads/IOB-Fix
 
       - name: Configure GCP Credentials
         id: auth
