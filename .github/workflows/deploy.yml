@@ -49,7 +49,7 @@ jobs:
 
       - name: Configure GCP Credentials
         id: auth
-        uses: google-github-actions/auth@v2.1.2
+        uses: google-github-actions/auth@v2.1.3
         with:
           create_credentials_file: 'true'
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER}}
@@ -121,7 +121,7 @@ jobs:
 
       - name: Configure GCP Credentials
         id: auth
-        uses: google-github-actions/auth@v2.1.2
+        uses: google-github-actions/auth@v2.1.3
         with:
           create_credentials_file: 'true'
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER}}
@@ -204,7 +204,7 @@ jobs:
 
       - name: Configure GCP Credentials
         id: auth
-        uses: google-github-actions/auth@v2.1.2
+        uses: google-github-actions/auth@v2.1.3
         with:
           create_credentials_file: 'true'
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER}}
